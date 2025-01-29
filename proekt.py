@@ -6,11 +6,17 @@ from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 from mistral_common.protocol.instruct.messages import UserMessage
 from mistral_common.protocol.instruct.request import ChatCompletionRequest
 
+from openai import OpenAI
 
-client = InferenceClient(
-	provider="hf-inference",
+client = OpenAI(
+	base_url="https://api-inference.huggingface.co/v1/",
 	api_key="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"
 )
+
+#client = InferenceClient(
+#	provider="hf-inference",
+#	api_key="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"
+#)
 
 zapros = st.text_input("Запрос", "Life of Brian")
 
