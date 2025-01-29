@@ -1,2 +1,4 @@
 huggingface_hub==0.28.0
+mistral_common==1.5.2
+mistral_inference==1.5.0
 streamlit==1.41.1
