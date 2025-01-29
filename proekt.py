@@ -1,14 +1,17 @@
 from huggingface_hub import InferenceClient
+import streamlit as st
 
 client = InferenceClient(
 	provider="hf-inference",
 	api_key="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"
 )
 
+zapros = st.text_input("Запрос", "Life of Brian")
+
 messages = [
 	{
 		"role": "user",
-		"content": "What is the capital of France?"
+		"content": zapros
 	}
 ]
 
