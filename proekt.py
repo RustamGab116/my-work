@@ -3,13 +3,9 @@ from openai import OpenAI
 
 client = OpenAI(
 	base_url="https://api-inference.huggingface.co/v1/",
-	api_key="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"
+	api_key="hub key"
 )
 
-#client = InferenceClient(
-#	provider="hf-inference",
-#	api_key="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"
-#)
 
 zapros = st.text_input("Запрос", "Life of Brian")
 
